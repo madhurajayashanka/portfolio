@@ -1,3 +1,24 @@
+// document.onkeypress = function (e) {
+//   e = e || window.event;
+//   if (e.keyCode === 13) {
+//     document.documentElement.classList.toggle("dark-mode");
+
+//     document.querySelectorAll(".inverted").forEach((result) => {
+//       result.classList.toggle("invert");
+//     });
+//   }
+// };
+
+const checkbox = document.getElementById("checkbox");
+
+checkbox.addEventListener("change", () => {
+  document.documentElement.classList.toggle("dark-mode");
+
+  document.querySelectorAll(".inverted").forEach((result) => {
+    result.classList.toggle("invert");
+  });
+});
+
 (function ($) {
   "use strict";
 
