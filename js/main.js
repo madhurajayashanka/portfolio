@@ -17,7 +17,7 @@ checkbox.addEventListener("change", () => {
   document.querySelectorAll(".inverted").forEach((result) => {
     result.classList.toggle("invert");
   });
-document.getElementById("mode-label-id").style.boxShadow= "0px 0px 22px -7px #fff"
+document.getElementById("mode-label-id").style.boxShadow= "0px 0px 14px 5px #fff"
 });
 
 (function ($) {
