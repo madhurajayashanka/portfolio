@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 /********** Template CSS **********/
 :root {
   --primary: #6244c5;
@@ -149,14 +151,14 @@
   background-color: white;
   position: absolute;
   top: 2px;
-  left: 2px;
+  left: 26px;
   border-radius: 50%;
   transition: transform 0.2s linear;
 }
 
 /*  target the elemenent after the label*/
 .mode-checkbox:checked + .mode-label .ball {
-  transform: translateX(24px);
+  transform: translateX(-24px);
 }
 
 .fa-moon {
@@ -165,6 +167,10 @@
 
 .fa-sun {
   color: yellow;
+}
+
+.titleName {
+  font-family: "Permanent Marker", cursive;
 }
 
 .social-media-wrapper {
@@ -389,6 +395,24 @@
   width: 30px;
 }
 
+.course a {
+  color: #12141d !important;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.course a .credentials {
+  color: #4e9f3d;
+}
+.course:hover {
+  font-size: 1.2rem;
+}
+.courseInstitute {
+  color: #6244c5;
+}
+
 /*** Service ***/
 
 .service-item .bg-icon {
@@ -399,8 +423,34 @@
   justify-content: center;
   background-size: cover;
 }
+.skill-outer {
+  margin: 0;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 100%;
+  height: 50% !important;
+}
+
+.skillTable {
+  text-align: center;
+  width: 100%;
+}
+.skillTable tr th {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding-bottom: 2em;
+  text-decoration: underline;
+}
+.skillTable tr td {
+  padding: 1.2rem 0 !important;
+}
+.techLogo {
+  width: 50px;
+}
 
 /*** Project Portfolio ***/
+
 #portfolio-flters li {
   display: inline-block;
   font-weight: 500;

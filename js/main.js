@@ -1,24 +1,24 @@
-// document.onkeypress = function (e) {
-//   e = e || window.event;
-//   if (e.keyCode === 13) {
-//     document.documentElement.classList.toggle("dark-mode");
-
-//     document.querySelectorAll(".inverted").forEach((result) => {
-//       result.classList.toggle("invert");
-//     });
-//   }
-// };
-
 const checkbox = document.getElementById("checkbox");
-
+darkmode();
 checkbox.addEventListener("change", () => {
   document.documentElement.classList.toggle("dark-mode");
 
   document.querySelectorAll(".inverted").forEach((result) => {
     result.classList.toggle("invert");
   });
-document.getElementById("mode-label-id").style.boxShadow= "0px 0px 14px 5px #fff"
+  document.getElementById("mode-label-id").style.boxShadow =
+    "0px 0px 14px 5px #fff";
 });
+function darkmode() {
+  document.documentElement.classList.toggle("dark-mode");
+  $(".dark-mode").toggleClass("changed");
+
+  document.querySelectorAll(".inverted").forEach((result) => {
+    result.classList.toggle("invert");
+  });
+  document.getElementById("mode-label-id").style.boxShadow =
+    "0px 0px 14px 5px #fff";
+}
 
 (function ($) {
   "use strict";
