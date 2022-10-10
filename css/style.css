@@ -29,6 +29,15 @@
   right: 45px;
   bottom: 45px;
   z-index: 99;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.back-to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
 }
 
 .my-6 {

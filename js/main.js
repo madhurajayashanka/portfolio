@@ -66,7 +66,7 @@ function darkmode() {
   });
 
   // Back to top button
-  $(window).scroll(function () {
+  /*$(window).scroll(function () {
     if ($(this).scrollTop() > 300) {
       $(".back-to-top").fadeIn("slow");
     } else {
@@ -76,7 +76,17 @@ function darkmode() {
   $(".back-to-top").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
     return false;
-  });
+  });*/
+
+  const toTop = document.querySelector(".back-to-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+      toTop.classList.add("active");
+    } else {
+      toTop.classList.remove("active");
+    }
+  })
 
   // Typed Initiate
   if ($(".typed-text-output").length == 1) {
