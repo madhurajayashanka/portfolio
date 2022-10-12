@@ -120,11 +120,15 @@
 .navbar .navbar-nav .nav-link.active {
   color: var(--primary);
 }
+@media (min-width: 490px) {
+}
 
 @media (max-width: 991.98px) {
   .navbar .navbar-nav .nav-link {
     padding: 10px 0;
   }
+}
+@media (min-width: 1200px) {
 }
 
 /*** Header ***/
@@ -501,7 +505,6 @@
 
 .modal-confirm {
   color: #636363;
-  width: 325px;
   font-size: 14px;
 }
 .modal-confirm .modal-content {
