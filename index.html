@@ -20,6 +20,10 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -540,8 +544,9 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="inverted btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                            <button id="submitBtn"  href="#myModal" data-toggle="modal" class="trigger-btn inverted btn btn-primary py-3 px-5" type="submit">Send Message</button>
                         </div>
+
                     </div>
                 </form>
             </div>
@@ -549,6 +554,30 @@
     </div>
 </div>
 <!-- Contact End -->
+
+<!-- Contact form success alert start -->
+
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="inverted icon-box">
+					<i class=" material-icons">&#xE876;</i>
+				</div>				
+				<h4 id="successName" class="modal-title w-100">Awesome Name!</h4>	
+			</div>
+			<div class="modal-body">
+				<p class="text-center">Thank you for contacting..</p>
+			</div>
+			<div class="inverted modal-footer">
+				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>     
+
+
+<!-- Contact form success alert end-->
 
 <!-- Copyright Start -->
 <footer class="inverted">
@@ -622,7 +651,7 @@ function writeUserData(name,email,subject,message) {
         subject: subject,
         message: message,
     });
-    alert("Message Successfully Sent!")
+    document.getElementById("successName").innerHTML=`Awesome ${name}!`;
   }
   
     // Initialize Firebase
@@ -641,7 +670,9 @@ function writeUserData(name,email,subject,message) {
         return (false)
     }
 </script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 
 </body>
