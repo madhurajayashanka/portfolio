@@ -1,4 +1,5 @@
 const checkbox = document.getElementById("checkbox");
+
 darkmode();
 checkbox.addEventListener("change", () => {
   document.documentElement.classList.toggle("dark-mode");
@@ -20,11 +21,17 @@ function darkmode() {
     "0px 0px 14px 5px #fff";
 }
 
+const form = document.getElementById("contactForm");
+form.addEventListener("change", () => {
+  document.getElementById("submitBtn").disabled = !form.checkValidity();
+});
+
 (function ($) {
   "use strict";
 
   // Spinner
   var spinner = function () {
+    document.getElementById("submitBtn").disabled = true;
     setTimeout(function () {
       if ($("#spinner").length > 0) {
         $("#spinner").removeClass("show");
@@ -86,7 +93,7 @@ function darkmode() {
     } else {
       toTop.classList.remove("active");
     }
-  })
+  });
 
   // Typed Initiate
   if ($(".typed-text-output").length == 1) {
