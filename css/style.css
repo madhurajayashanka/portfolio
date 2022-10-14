@@ -422,6 +422,9 @@
 .course:hover {
   font-size: 1.2rem;
 }
+.courseList {
+  list-style: none;
+}
 .courseInstitute {
   color: #6244c5;
 }
