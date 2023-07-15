@@ -164,3 +164,4 @@ form.addEventListener("change", () => {
 const d = new Date();
 let year = d.getFullYear();
 document.getElementById("year").innerHTML = year;
+document.getElementById("experience").innerHTML = year - 2020;

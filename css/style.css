@@ -225,8 +225,8 @@
   color: #c4302b;
 }
 
-.hackerrank {
-  color: #25d366;
+.medium {
+  color: #808080;
 }
 
 .bg-ico {
@@ -264,14 +264,14 @@
   background-color: #c4302b;
 }
 
-#hackerrank:hover {
-  background-color: #25d366;
-}
+/* #medium:hover {
+  background-color: #808080;
+} */
 
 .github:hover,
 .linkedin:hover,
 .youtube:hover,
-.hackerrank:hover {
+.medium:hover {
   color: white;
   transform: scale(1.3);
 }
